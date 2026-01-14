@@ -1,0 +1,113 @@
+@model SistemaBienestar.Web.Models.Empleado
+@{ ViewData["Title"] = "Nuevo Empleado"; }
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <!-- Header: Datos Principales -->
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Datos Principales</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Identificación</label>
+                        <input asp-for="Identificador" class="form-control" />
+                        <span asp-validation-for="Identificador" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <input asp-for="Nombre" class="form-control" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input asp-for="Apellidos" class="form-control" />
+                        <span asp-validation-for="Apellidos" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Foto</label>
+                        <input type="file" name="fotoArchivo" class="form-control" accept="image/*" />
+                        <input type="hidden" asp-for="Foto" /> <!-- Para mantener compatibilidad si no se sube nada -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pestañas -->
+    <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab_1" data-toggle="tab">Información Personal</a></li>
+            <li><a href="#tab_2" data-toggle="tab">Contacto</a></li>
+        </ul>
+        <div class="tab-content">
+            <!-- Tab 1: Información Personal -->
+            <div class="tab-pane active" id="tab_1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Ciudad</label>
+                            <input asp-for="Ciudad" class="form-control" />
+                            <span asp-validation-for="Ciudad" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Dirección</label>
+                            <input asp-for="Direccion" class="form-control" />
+                            <span asp-validation-for="Direccion" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Estado Civil</label>
+                            <input asp-for="EstadoCivil" class="form-control" />
+                            <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Cargo</label>
+                            <select asp-for="IdCargo" class="form-control" asp-items="ViewBag.IdCargo"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Contacto -->
+            <div class="tab-pane" id="tab_2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Teléfono</label>
+                            <input asp-for="Telefono" class="form-control" />
+                            <span asp-validation-for="Telefono" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Correo</label>
+                            <input asp-for="Correo" class="form-control" />
+                            <span asp-validation-for="Correo" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.tab-content -->
+    </div>
+
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-action="Index" class="btn btn-default">Cancelar</a>
+    </div>
+</form>

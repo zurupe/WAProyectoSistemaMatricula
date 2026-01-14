@@ -1,0 +1,54 @@
+@model IEnumerable<SistemaBienestar.Web.Models.Empleado>
+@{ ViewData["Title"] = "Gestión de Empleados"; }
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Listado de Empleados</h3>
+        <div class="pull-right">
+            <a asp-action="GenerarReporte" class="btn btn-success" style="margin-right: 5px;"><i class="fa fa-file-pdf-o"></i> Generar Reporte</a>
+            <a asp-action="Create" class="btn btn-primary">Nuevo Empleado</a>
+        </div>
+    </div>
+    <div class="box-body table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th>Identificación</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Cargo</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                <tr>
+                    <td>@item.IdEmpleado</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.Foto))
+                        {
+                            <img src="@item.Foto" alt="Foto" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <span class="text-muted">No foto</span>
+                        }
+                    </td>
+                    <td>@item.Identificador</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Apellidos</td>
+                    <td>@item.Cargo?.NombreCargo</td>
+                    <td>@item.Correo</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdEmpleado" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.IdEmpleado" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

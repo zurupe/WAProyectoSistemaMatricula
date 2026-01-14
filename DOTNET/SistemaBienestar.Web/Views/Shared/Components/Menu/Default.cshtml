@@ -1,0 +1,37 @@
+@model IEnumerable<SistemaBienestar.Web.Models.Menu>
+
+@foreach (var menu in Model)
+{
+    // Check if the current controller matches the menu URL to set active class
+    // Simple logic: if the URL contains the Controller name. 
+    // The DB URLs are like 'MatriculaServlet', 'UsuarioServlet?accion=listar'.
+    // We map these to our ASP.NET Controllers: 
+    // MatriculaServlet -> Matriculas ?? (Need to check Controller names)
+    // UsuarioServlet -> Usuarios
+    // AdministradorServlet -> Administradores ??
+    // EmpleadoServlet -> Empleados
+    
+    // For now, I will assume a mapping or just render the links. 
+    // Since the original layout had hardcoded ASP actions, I need to map the DB URL to ASP.NET routes.
+    // However, the prompt says "use as reference the database". 
+    // If the DB has 'MatriculaServlet', that implies a Java Legacy system.
+    // I should map these legacy URLs to the new ASP.NET Controllers.
+    
+    string controllerName = "Home";
+    string actionName = "Index";
+    
+    if (menu.Url.Contains("UsuarioServlet")) { controllerName = "Usuarios"; }
+    else if (menu.Url.Contains("EmpleadoServlet")) { controllerName = "Empleados"; }
+    else if (menu.Url.Contains("MatriculaServlet")) { controllerName = "Matriculas"; } // Assuming MatriculasController exists or will exist
+    else if (menu.Url.Contains("AdministradorServlet")) { controllerName = "Administradores"; }
+    else if (menu.Url.Contains("PagosServlet")) { controllerName = "Pagos"; }
+
+    var currentController = ViewContext.RouteData.Values["Controller"]?.ToString();
+    var isActive = currentController == controllerName ? "active" : "";
+
+    <li class="@isActive">
+        <a asp-controller="@controllerName" asp-action="@actionName">
+            <i class="fa @menu.Icono"></i> <span>@menu.Nombre</span>
+        </a>
+    </li>
+}

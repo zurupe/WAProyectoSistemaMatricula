@@ -1,0 +1,135 @@
+@model dynamic
+@{ ViewData["Title"] = "Gestión de Perfiles"; }
+
+<style>
+    .dual-list-box { display: flex; align-items: center; justify-content: center; }
+    .list-group { height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 5px; list-style: none; }
+    .list-group-item { cursor: pointer; padding: 5px 10px; }
+    .list-group-item:hover, .list-group-item.active { background-color: #3f51b5; color: white; }
+    .controls { display: flex; flex-direction: column; gap: 10px; margin: 0 20px; }
+</style>
+
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">Asignación de Cargos a Usuarios</h3>
+        <a asp-action="Index" class="btn btn-default pull-right"><i class="fa fa-arrow-left"></i> Volver</a>
+    </div>
+    <div class="box-body">
+        
+        <div class="form-group">
+            <label>Seleccione el Cargo:</label>
+            <select id="selectCargo" class="form-control" style="max-width: 400px; margin: 0 auto;">
+                <option value="">-- Seleccione --</option>
+                @foreach (var cargo in ViewBag.Cargos as List<SistemaBienestar.Web.Models.Cargo>)
+                {
+                    <option value="@cargo.IdCargo">@cargo.NombreCargo</option>
+                }
+            </select>
+        </div>
+
+        <div class="row dual-list-box" style="margin-top: 30px;">
+            <div class="col-md-5">
+                <h4 class="text-center">Usuarios Sin Cargo Seleccionado</h4>
+                <div id="listUnassigned" class="list-group">
+                    <!-- Loaded via JS -->
+                </div>
+            </div>
+            
+            <div class="col-md-2" style="text-align: center;">
+                <div class="controls">
+                    <button id="btnAssign" class="btn btn-success"><i class="fa fa-chevron-right"></i> Asignar</button>
+                    <button id="btnUnassign" class="btn btn-danger"><i class="fa fa-chevron-left"></i> Quitar</button>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <h4 class="text-center">Usuarios Con Cargo Seleccionado</h4>
+                <div id="listAssigned" class="list-group">
+                    <!-- Loaded via JS -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            var selectedUserIds = { unassigned: [], assigned: [] };
+
+            // Load users on cargo change
+            $("#selectCargo").change(function() {
+                var idCargo = $(this).val();
+                loadUsers(idCargo);
+            });
+
+            function loadUsers(idCargo) {
+                $("#listUnassigned").empty();
+                $("#listAssigned").empty();
+                selectedUserIds = { unassigned: [], assigned: [] }; // Reset selections
+
+                if (!idCargo) return;
+
+                $.get("/Usuarios/GetUsuariosPorCargo", { idCargo: idCargo }, function(data) {
+                    // data.asignados, data.noAsignados
+                    data.noAsignados.forEach(u => appendUser(u, "#listUnassigned"));
+                    data.asignados.forEach(u => appendUser(u, "#listAssigned"));
+                });
+            }
+
+            function appendUser(user, listId) {
+                var li = $("<li>")
+                    .addClass("list-group-item")
+                    .text(user.nombreUsuario)
+                    .attr("data-id", user.idUsuario)
+                    .click(function() {
+                        $(this).toggleClass("active");
+                        // Track selection logic here if needed, or just iterate .active on button click
+                    });
+                $(listId).append(li);
+            }
+
+            // Assign Button
+            $("#btnAssign").click(function() {
+                var idCargo = $("#selectCargo").val();
+                if (!idCargo) return alert("Seleccione un cargo");
+
+                var selected = $("#listUnassigned .list-group-item.active");
+                if (selected.length === 0) return alert("Seleccione usuarios de la izquierda");
+
+                var promises = [];
+                selected.each(function() {
+                    var el = $(this);
+                    var idUsuario = el.attr("data-id");
+                    
+                    var p = $.post("/Usuarios/AsignarCargo", { idUsuario: idUsuario, idCargo: idCargo }, function(res) {
+                        if (res.success) {
+                            el.removeClass("active").appendTo("#listAssigned");
+                        }
+                    });
+                    promises.push(p);
+                });
+            });
+
+            // Unassign Button
+            $("#btnUnassign").click(function() {
+                var selected = $("#listAssigned .list-group-item.active");
+                if (selected.length === 0) return alert("Seleccione usuarios de la derecha");
+
+                var promises = [];
+                selected.each(function() {
+                    var el = $(this);
+                    var idUsuario = el.attr("data-id");
+                    
+                    var p = $.post("/Usuarios/RemoverCargo", { idUsuario: idUsuario }, function(res) {
+                        if (res.success) {
+                            el.removeClass("active").appendTo("#listUnassigned");
+                        }
+                    });
+                    promises.push(p);
+                });
+            });
+        });
+    </script>
+}

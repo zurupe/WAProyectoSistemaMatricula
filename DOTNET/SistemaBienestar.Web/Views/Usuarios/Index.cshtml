@@ -1,0 +1,135 @@
+@model IEnumerable<SistemaBienestar.Web.Models.Usuario>
+@{ ViewData["Title"] = "Gestión de Usuarios"; }
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Listado de Usuarios</h3>
+        <div class="pull-right">
+            <a asp-action="Perfiles" class="btn btn-warning" style="margin-right: 5px;"><i class="fa fa-users"></i> Perfiles</a>
+            <a asp-action="Create" class="btn btn-primary">Nuevo Usuario</a>
+        </div>
+    </div>
+    <div class="box-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Cargo</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                <tr>
+                    <td>@item.IdUsuario</td>
+                    <td>@item.NombreUsuario</td>
+                    <td>@item.Cargo?.NombreCargo</td>
+                    <td>
+                        @if(item.Estado) { <span class="label label-success">Activo</span> }
+                        else { <span class="label label-danger">Inactivo</span> }
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdUsuario" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.IdUsuario" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="box box-danger">
+            <div class="box-header with-border">
+                <h3 class="box-title"><i class="fa fa-key"></i> Configurar Permisos por Cargo</h3>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label>Seleccione el Cargo a Configurar:</label>
+                    <select id="selectCargo" class="form-control">
+                        <option value="">-- Seleccione un Cargo --</option>
+                        @foreach (var cargo in ViewBag.Cargos as List<SistemaBienestar.Web.Models.Cargo>)
+                        {
+                            <option value="@cargo.IdCargo">@cargo.NombreCargo</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Seleccione las opciones de Menú visibles:</label>
+                    <div id="menuCheckboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
+                        @foreach (var menu in ViewBag.Menus as List<SistemaBienestar.Web.Models.Menu>)
+                        {
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="chkMenu" value="@menu.IdMenu">
+                                    <i class="fa @menu.Icono"></i> @menu.Nombre
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="form-group text-right">
+                    <button id="btnGuardarPermisos" class="btn btn-danger"><i class="fa fa-save"></i> Guardar Permisos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="callout callout-info">
+            <h4>¿Cómo funciona?</h4>
+            <p>Seleccione un cargo en la lista desplegable. El sistema marcará automáticamente las opciones a las que ese cargo tiene acceso actualmente. Marque o desmarque las casillas y haga clic en "Guardar Permisos" para actualizar los accesos de inmediato.</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // When cargo changes, load permissions
+            $("#selectCargo").change(function() {
+                var idCargo = $(this).val();
+                
+                // Clear checkboxes first
+                $(".chkMenu").prop('checked', false);
+
+                if (idCargo) {
+                    $.get("/Usuarios/GetPermisos", { idCargo: idCargo }, function(data) {
+                        // 'data' is a list of IdMenu [1, 2, 5]
+                        data.forEach(function(idMenu) {
+                            $(".chkMenu[value='" + idMenu + "']").prop('checked', true);
+                        });
+                    });
+                }
+            });
+
+            // Save permissions
+            $("#btnGuardarPermisos").click(function() {
+                var idCargo = $("#selectCargo").val();
+                if (!idCargo) {
+                    alert("Por favor seleccione un cargo primero.");
+                    return;
+                }
+
+                var selectedMenus = [];
+                $(".chkMenu:checked").each(function() {
+                    selectedMenus.push($(this).val());
+                });
+
+                $.post("/Usuarios/SavePermisos", { idCargo: idCargo, idMenus: selectedMenus }, function(response) {
+                    if (response.success) {
+                        alert(response.message);
+                    } else {
+                        alert("Error al guardar permisos.");
+                    }
+                });
+            });
+        });
+    </script>
+}

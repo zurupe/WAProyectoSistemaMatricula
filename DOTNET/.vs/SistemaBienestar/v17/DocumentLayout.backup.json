@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|d:\\universidad\\desarrollo web avanzado\\proyecto\\monster_university_gr06\\04.prototipo\\aplicativo\\dotnet\\sistemabienestar.web\\views\\empleados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C224941D-5AB9-446E-A274-FB362A7236B4}|SistemaBienestar.Web\\SistemaBienestar.Web.csproj|solutionrelative:sistemabienestar.web\\views\\empleados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T04:52:25.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T04:52:15.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SistemaBienestar.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T04:48:20.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Usuarios\\Create.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Usuarios\\Create.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Usuarios\\Create.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Usuarios\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T04:44:24.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Usuarios\\Index.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Usuarios\\Index.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Usuarios\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T04:43:50.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T04:06:36.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Controllers\\UsuariosController.cs",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "SistemaBienestar.Web\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAtwGoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T04:00:11.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Empleados\\Index.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Empleados\\Index.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Empleados\\Index.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Empleados\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T04:06:03.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Empleados\\Create.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Empleados\\Create.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Empleados\\Create.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Empleados\\Create.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T02:56:46.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Controllers\\EmpleadosController.cs",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "SistemaBienestar.Web\\Controllers\\EmpleadosController.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAkwJ0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T02:47:37.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "SistemaBienestar.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T23:59:58.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Empleados\\Edit.cshtml",
+              "RelativeDocumentMoniker": "SistemaBienestar.Web\\Views\\Empleados\\Edit.cshtml",
+              "ToolTip": "D:\\Universidad\\Desarrollo Web Avanzado\\Proyecto\\MONSTER_UNIVERSITY_GR06\\04.PROTOTIPO\\APLICATIVO\\DOTNET\\SistemaBienestar.Web\\Views\\Empleados\\Edit.cshtml",
+              "RelativeToolTip": "SistemaBienestar.Web\\Views\\Empleados\\Edit.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T02:47:24.539Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
